@@ -274,7 +274,7 @@ int gb2utf8( char * utf, char * gb)
   while (*gb)
   {
     //处理一个gbk字符
-    if(*gb < 0x80) //英文字符
+    if((unsigned char)*gb < 0x80) //英文字符
     {
       utf[len] = *gb; //取wchar的低8位
       gb++;
